@@ -1,1 +1,0 @@
-# ai-proj-methodology-final
