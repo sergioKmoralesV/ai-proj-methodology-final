@@ -1,0 +1,1 @@
+# AI project methodology - Credit score prediction
