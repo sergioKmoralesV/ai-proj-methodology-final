@@ -25,7 +25,9 @@ def transform_datatypes(df_master: pd.DataFrame) ->pd.DataFrame:
 
 def preprocess_pipeline(df_master: pd.DataFrame, is_train=False) -> pd.DataFrame:
     """Preprocess pipeline to prepare data for being processed"""
+
     df = df_master.copy()
     df = clean_strange_values(df)
     df = transform_datatypes(df)
+
     return df
