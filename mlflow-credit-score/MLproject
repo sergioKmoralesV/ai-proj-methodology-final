@@ -1,6 +1,6 @@
 name: credit-score
 
-conda_env: conda.yaml
+conda_env: conda_mlflow.yaml
 
 entry_points:
   main:
