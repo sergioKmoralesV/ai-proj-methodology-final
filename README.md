@@ -10,6 +10,8 @@
 ## To deactivate an active environment, use
 	$ conda deactivate
 
+# MLflow
+
 ## Activate MLflow UI
 	$ mlflow ui --backend-store-uri mlflow-credit-score/mlruns
 	
@@ -18,4 +20,8 @@
 ## Run MLflow Packing Training Code in conda Environment
 	$ cd mlflow-credit-score
 	$ mlflow run mlflow-credit-score .
+
+## Deploy the Model Using MLflow Models through a REST API
+
+	$ mlflow models serve --model-uri mlflow-credit-score/mlruns/0/4524303c575b408ea41da2dc4422ffb5/artifacts/model -p 1234
 
