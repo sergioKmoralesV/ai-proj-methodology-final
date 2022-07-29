@@ -39,6 +39,7 @@ $ conda deactivate
 ### Deploy the Model Using MLflow Models through a REST API
 	$ mlflow models serve --model-uri mlflow-credit-score/mlruns/0/4524303c575b408ea41da2dc4422ffb5/artifacts/model -p 1234
 
+![Screenshot](images/mlflow-rest.png)
 ## SHAP Analysis
 
 - File: 
