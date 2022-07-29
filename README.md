@@ -23,7 +23,7 @@ _To deactivate an active environment, use_
 $ conda deactivate
 ```
 
-# MLflow
+## MLflow
 
 ### Activate MLflow UI
 	$ mlflow ui --backend-store-uri mlflow-credit-score/mlruns
