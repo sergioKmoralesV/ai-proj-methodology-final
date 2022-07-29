@@ -5,11 +5,21 @@ COLS_TO_DROP = ['Customer_ID', 'Name', 'SSN']
 
 
 def clean_strange_values (df: pd.DataFrame) -> pd.DataFrame:
-    """Transforms non known values into known ones"""
+    """
+    Cleans datasets from weird values
+    :param df: dataset to transform
+    :return: pd.Dataframe
+    """
+
     return df.applymap(lambda x: x if x is np.NaN or not isinstance(x, str) else str(x).strip('_ ,"')).replace(['', 'nan', '!@9#%8', '#F%$D@*&8'], np.NaN)
 
 
-def transform_datatypes(df_master: pd.DataFrame) ->pd.DataFrame:
+def transform_datatypes(df_master: pd.DataFrame) -> pd.DataFrame:
+    """
+    Transfor to correct datatypes
+    :param df_master: dataset to transform
+    :return: pd.Dataframe
+    """
     df = df_master.copy()
 
     df.Annual_Income = df.Annual_Income.astype(float)
@@ -33,7 +43,13 @@ def transform_datatypes(df_master: pd.DataFrame) ->pd.DataFrame:
 
 
 def preprocess_pipeline(df_master: pd.DataFrame, is_train=False) -> pd.DataFrame:
-    """Preprocess pipeline to prepare data for being processed"""
+    """
+    Preprocess pipeline to prepare data for being processed
+
+    :param df_master: dataset
+    :param is_train: to know if we are training
+    :return: pd.Dataframe
+    """
 
     df = df_master.copy()
     # Setting up the index to ID
