@@ -1,0 +1,12 @@
+name: cred-score
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+    - mlflow==1.27.0
+    - numpy==1.23.1
+    - pandas==1.4.3
+    - scikit-learn==1.1.1
+    
