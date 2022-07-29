@@ -11,4 +11,6 @@ dependencies:
     - pandas==1.4.3
     - scikit-learn==1.1.1
     - seaborn==0.11.2
-    - jupyter==1.0.0ù
+    - jupyter==1.0.0
+    - shap==0.41.0
+
