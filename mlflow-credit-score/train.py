@@ -41,20 +41,22 @@ if __name__ == "__main__":
         # Execute ElasticNet
         rf = RandomForestClassifier(n_estimators=n_estimators, max_depth=max_depth, random_state=42)
         rf.fit(train_x, train_y)
+
         # Evaluate Metrics
         predicted = rf.predict(test_x)
-        (precision, recall, accuracy, f1) = eval_metrics(test_y, predicted)
+        metrics = eval_metrics(test_y, predicted)
         # Print out metrics
         print("Random Forest model (n_estimators=%f, max_depth=%f):" % (n_estimators, max_depth))
-        print("  Precision: %s" % precision)
-        print("  Recall: %s" % recall)
-        print("  Accuracy: %s" % accuracy)
-        print("  F1: %s" % f1)
+        print("  Precision: %s" % metrics['precision'])
+        print("  Recall: %s" % metrics['recall'])
+        print("  Accuracy: %s" % metrics['accuracy'])
+        print("  F1: %s" % metrics['f1'])
+
         # Log parameter, metrics, and model to MLflow
         mlflow.log_param("n_estimators", n_estimators)
         mlflow.log_param("max_depth", max_depth)
-        mlflow.log_metric("precision", precision)
-        mlflow.log_metric("recall", recall)
-        mlflow.log_metric("accuracy", accuracy)
-        mlflow.log_metric("f1", accuracy)
+        mlflow.log_metric("precision", metrics['precision'])
+        mlflow.log_metric("recall", metrics['recall'])
+        mlflow.log_metric("accuracy", metrics['accuracy'])
+        mlflow.log_metric("f1", metrics['f1'])
         mlflow.sklearn.log_model(rf, "model")
