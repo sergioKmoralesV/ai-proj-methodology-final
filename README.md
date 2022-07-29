@@ -29,11 +29,13 @@ $ conda deactivate
 	$ mlflow ui --backend-store-uri mlflow-credit-score/mlruns
 	
 ### View it at http://localhost:5000
+![Screenshot](images/mlflow-ui.png)
 
 ### Run MLflow Packing Training Code in conda Environment
 	$ cd mlflow-credit-score
-	$ mlflow run mlflow-credit-score .
+	$ mlflow run .
 
+![Screenshot](images/mlflow-packing.png)
 ### Deploy the Model Using MLflow Models through a REST API
 	$ mlflow models serve --model-uri mlflow-credit-score/mlruns/0/4524303c575b408ea41da2dc4422ffb5/artifacts/model -p 1234
 

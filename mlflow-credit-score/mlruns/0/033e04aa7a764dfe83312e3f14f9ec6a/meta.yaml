@@ -1,0 +1,15 @@
+artifact_uri: file:///home/isaac/Documents/ai-proj-methodology-final/mlflow/mlruns/0/033e04aa7a764dfe83312e3f14f9ec6a/artifacts
+end_time: 1659101130013
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 033e04aa7a764dfe83312e3f14f9ec6a
+run_uuid: 033e04aa7a764dfe83312e3f14f9ec6a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1659101125967
+status: 3
+tags: []
+user_id: isaac
