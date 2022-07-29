@@ -37,3 +37,16 @@ $ conda deactivate
 ### Deploy the Model Using MLflow Models through a REST API
 	$ mlflow models serve --model-uri mlflow-credit-score/mlruns/0/4524303c575b408ea41da2dc4422ffb5/artifacts/model -p 1234
 
+## SHAP Analysis
+
+- File: 
+	notebooks/SHAP-analysis.ipynb
+### Visualize explanations for a specific point of your data set
+
+![Screenshot](images/SHAP-point.png)
+
+### Visualize explanations for samole points of your data set at once
+![Screenshot](images/SHAP-samples.png)
+
+### Visualize a summary plot for each class on the whole dataset
+![Screenshot](images/SHAP-impact.png)
