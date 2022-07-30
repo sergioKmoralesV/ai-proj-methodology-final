@@ -7,8 +7,10 @@ COLS_TO_DROP = ['Customer_ID', 'Name', 'SSN']
 def clean_strange_values (df: pd.DataFrame) -> pd.DataFrame:
     """
     Cleans datasets from weird values
+    
     :param df: dataset to transform
     :return: pd.Dataframe
+    :rtype: pd.Dataframe
     """
 
     return df.applymap(lambda x: x if x is np.NaN or not isinstance(x, str) else str(x).strip('_ ,"')).replace(['', 'nan', '!@9#%8', '#F%$D@*&8'], np.NaN)
@@ -17,8 +19,10 @@ def clean_strange_values (df: pd.DataFrame) -> pd.DataFrame:
 def transform_datatypes(df_master: pd.DataFrame) -> pd.DataFrame:
     """
     Transfor to correct datatypes
+    
     :param df_master: dataset to transform
     :return: pd.Dataframe
+    :rtype: pd.Dataframe
     """
     df = df_master.copy()
 
@@ -49,6 +53,7 @@ def preprocess_pipeline(df_master: pd.DataFrame, is_train=False) -> pd.DataFrame
     :param df_master: dataset
     :param is_train: to know if we are training
     :return: pd.Dataframe
+    :rtype: pd.Dataframe
     """
 
     df = df_master.copy()
