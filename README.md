@@ -70,3 +70,12 @@ $ conda deactivate
 
 - Visualize a summary plot for each class on the whole dataset<br/>
 <img src='images/SHAP-impact.png' width='400px'/>
+
+
+
+## Sphinx Documentation
+
+	$ cd docs
+	$ make html
+
+![Screenshot](images/docs.png)
